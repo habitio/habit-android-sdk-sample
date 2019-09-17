@@ -67,3 +67,39 @@ We support the SDK back to api level 23, although it could work on older api lev
 Check the rest of the sample app for details.
 
 If want to compile and run, find the strings REPLACE_ME and replace it with the appropriate information.
+
+## Analysed Data 
+
+| Property  | Received on event (Background) | Received on event (Foreground) | Query by snapshot | Permission requested to the user | Frequency |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| network / current_wifi | NO (>= 24) | YES | YES | ACCESS_FINE_LOCATION | all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) except itself |
+| network / carrier | NO | NO | YES | Not necessary | all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) |
+| network / internet_connection |  |  |  |  |  |
+| network / scan |  |  |  |  |  |
+| network / roaming |  |  |  |  |  |
+| network / flight_mode |  |  |  |  |  |
+| network / mobile_data_enabled |  |  |  |  |  |
+| location / location |  YES |  YES |  YES |  ACCESS_FINE_LOCATION |  all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) except itself |
+| location / visit |  NA |  NA |  NA |  NA |  NA |
+| movement / activity |  NO |  YES |  YES |  ACTIVITY_RECOGNITION (automatic) |  all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) except itself |
+| movement / activity_history |  NA |  NA |  NA |  NA |  NA |
+| battery / charge |  NO (>= 26) |  YES |  YES |  Not necessary |  all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) except itself |
+| battery / level |  NO (>= 26) |  YES (on low threshold) |  YES |  Not necessary |  all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) except itself |
+| devices / bluetooth |  NO | YES | YES | BLUETOOTH (automatic, but must be ON) |  all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) |
+| current_device / agent | NO | NO | YES | Not necessary | all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) |
+| current_device / installed_packages | NO | NO | YES | Not necessary | all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) except itself |
+| current_device / added_package | NO (>= 26) | YES | NO | Not necessary | when a package is added |
+| current_device / removed_package | NO (>= 26) | YES | NO | Not necessary | when a package is removed |
+| screen / status | NO | YES | YES | Not necessary | all events (start, time, wifi, location, awareness, battery, bluetooth, screen, packages) |
+
+
+## Future work
+
+- Configuration of which data is supposed to be analysed by the SDK.
+
+
+
+## Contact Us
+
+For more information contact us at support@habit.io  
+
