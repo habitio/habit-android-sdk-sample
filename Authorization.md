@@ -7,7 +7,7 @@ The usual way to obtain it, is through HTTP calls to our backend.
 You can check the class [AuthRepositoryKtorGateway.kt] for a sample on how to do this, but in case you want to implement yourself, here's what you have to do:
 
 ## Account login
-Do an HTTP GET to https://api.platform.muzzley.com/v3/i18n/auth/authorize?response_type=password&scope=sysadmin%2Capplication%2Cuser with additional query parameters "username","password" and "client_id" using the email,password and appClientId respectively.
+Do an HTTP GET to https://api.platform.muzzley.com/v3/i18n/auth/authorize?response_type=password&scope=application%2Cuser with additional query parameters "username","password" and "client_id" using the email,password and appClientId respectively.
 
 The appClientId is provisioned previously in our [selfcare back office]
 
