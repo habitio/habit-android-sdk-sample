@@ -1,7 +1,7 @@
 package io.habit.android.sdklogin.repository
 
 import android.content.Context
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 
 class LocalRepositoryPreferencesGateway(context: Context) : LocalRepository {
 

@@ -18,7 +18,7 @@ class App : Application(){
         }
         localRepository = LocalRepositoryPreferencesGateway(this)
 
-        SDK.init(this,"REPLACE_ME_INIT_STRING") {
+        SDK.init(this,"REPLACE_ME_APP_NAMESPACE","REPLACE_ME_INIT_STRING") {
             println("init result: $it")
             if (it == HabitStatusCodes.HABIT_SDK_SET_AUTHENTICATION ){
                 localRepository.auth?.let { SDK.setAuthorization(it) }
