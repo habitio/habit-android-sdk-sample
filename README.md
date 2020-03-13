@@ -11,7 +11,7 @@ repositories {
 }
 ```
 
-Unzip the [lib code](https://cdn.muzzley.com/habit-sdk/HabitAnalyticsSDK001.zip) into your mavenLocal dir (${user.home}/.m2/repository/)
+Unzip the [lib code](https://github.com/habitio/habit-android-sdk-sample/tree/master/lib) into your mavenLocal dir (${user.home}/.m2/repository/)
 
 Add dependencies to app/build.gradle
 ```
